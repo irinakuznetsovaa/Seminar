@@ -20,7 +20,7 @@ public class SerializeTest {
     @Test
     public void serializer()  {
         Serialize.serializer(listAnimals, "hardanimalFile");
-        assertEquals(listAnimals, Serialize.hardDeserializer("hardanimalFile"));
+        assertEquals(listAnimals, Serialize.deserializer("hardanimalFile"));
     }
 
 }

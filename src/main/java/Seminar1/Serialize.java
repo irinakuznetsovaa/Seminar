@@ -49,7 +49,7 @@ public class Serialize {
         System.out.println(ex.getMessage());
     }
 }
-    public static List<Animals> hardDeserializer(String fileName)  {
+    public static List<Animals> deserializer(String fileName)  {
         Path path = Paths.get(fileName);
         List<Animals> animalList = new ArrayList<>();
 
