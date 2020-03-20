@@ -3,6 +3,7 @@ package Seminar1;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -22,5 +23,15 @@ public class SerializeTest {
         Serialize.serializer(listAnimals, "hardanimalFile");
         assertEquals(listAnimals, Serialize.deserializer("hardanimalFile"));
     }
+    @Test
+    public void searializableEmpty() {
 
+        Serialize.record(Collections.emptyList(), "test");
+        assertEquals(Collections.emptyList(), Serialize.read("test"));
+    }
+    @Test
+    public void hardSerializerEmpty(){
+        Serialize.serializer(Collections.emptyList(), "test");
+        assertEquals(Collections.emptyList(), Serialize.deserializer("test"));
+    }
 }
