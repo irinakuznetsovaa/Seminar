@@ -17,5 +17,10 @@ public class SerializeTest {
         Serialize.record(listAnimals, "animalFile");
         assertEquals(listAnimals, Serialize.read("animalFile"));
     }
+    @Test
+    public void serializer()  {
+        Serialize.serializer(listAnimals, "hardanimalFile");
+        assertEquals(listAnimals, Serialize.hardDeserializer("hardanimalFile"));
+    }
 
 }
